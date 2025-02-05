@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:it_solution_technical_task/components/color.dart';
 import 'package:it_solution_technical_task/components/widget.dart';
-import 'package:it_solution_technical_task/screens/home_controller.dart';
+import 'package:it_solution_technical_task/home/home_controller.dart';
 
 class HomeView extends StatelessWidget {
   HomeView({super.key});
