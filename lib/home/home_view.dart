@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:it_solution_technical_task/components/color.dart';
-import 'package:it_solution_technical_task/components/widget.dart';
 import 'package:it_solution_technical_task/home/home_controller.dart';
 
 class HomeView extends StatelessWidget {
@@ -11,27 +9,51 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: blue,
-        title: customTxt("IT Solution Task", 25, black, FontWeight.w500),
-        centerTitle: true,
-      ),
-      
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Column(
-            children: [
-              customTxt(
-                  "Add Image generate by html", 18, black, FontWeight.w500),
-              gapH(20),
-              customTextField("Please enter your text", 300, 16),
-              gapH(20),
-              customButton(40, 200, white, blue, 8, () {},
-                  customTxt("Generate Link", 16, black, FontWeight.w400))
-            ],
-          ),
+      appBar: AppBar(),
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(32, 16, 32, 16),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Expanded(
+              child: AspectRatio(
+                aspectRatio: 1,
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.grey,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 8),
+            Row(
+              children: [
+                const Expanded(
+                  child: TextField(
+                    decoration: InputDecoration(hintText: 'Image URL'),
+                  ),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    // Handle the button press logic here.
+                  },
+                  child: const Padding(
+                    padding: EdgeInsets.fromLTRB(0, 12, 0, 12),
+                    child: Icon(Icons.arrow_forward),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 64),
+          ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Handle the floating action button press logic here.
+        },
+        child: const Icon(Icons.add),
       ),
     );
   }
