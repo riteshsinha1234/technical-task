@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:it_solution_technical_task/screens/home_view.dart';
+import 'package:it_solution_technical_task/home/home_view.dart';
 
 void main() {
   runApp(const MyApp());
