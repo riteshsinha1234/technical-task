@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:it_solution_technical_task/home/home_controller.dart';
 
 class HomeView extends StatelessWidget {
-  HomeView({super.key});
-  final HomeController controller = Get.put(HomeController());
+  const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
